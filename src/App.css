@@ -1,0 +1,13 @@
+.json-display {
+  padding: 10px;
+  background-color: rgb(50, 50, 50);
+  color: white;
+  overflow-x: scroll;
+  width: 80%;
+  margin: auto;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
