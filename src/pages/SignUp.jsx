@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import SignInWithFacebookBtn from '../components/SignInWithFacebookBtn';
-import SignInWithGoogleBtn from '../components/SignInWithGoogleBtn';
+
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
-
-    const CLIENT_ID = "90952135970-jt1ghjsrlql93ncfhfgmlpdatp4k16dj.apps.googleusercontent.com"
 
     const userInfo = {
         username: "", email: "", password: ""
