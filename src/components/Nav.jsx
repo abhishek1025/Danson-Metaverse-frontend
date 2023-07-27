@@ -16,7 +16,7 @@ const Nav = () => {
     return (
         <nav className="bg-white py-4 px-6">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-                <span className="text-2xl font-bold">Random Project</span>
+                <span className="text-2xl font-bold">Project</span>
                 <ul className="space-x-4">
                     <li className="inline-block">
                         <Link to="/" className="text-gray-700 hover:text-gray-900">Home</Link>
