@@ -17,11 +17,8 @@ const SignIn = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-
 
         const res = await fetch("https://mern-metaverse-krish.vercel.app/api/login", {
             method: 'POST',
@@ -108,7 +105,7 @@ const SignIn = () => {
                         Haven't verified the account yet? <Link to="/verifyAccount" className='text-blue-700 underline'> Click me </Link>
                     </div>
 
-                    <div className="flex items-center justify-center mb-4 mt-3">
+                    {/* <div className="flex items-center justify-center mb-4 mt-3">
                         <div className="w-1/2 border-t-2 border-gray-300"></div>
                         <div className="mx-4 text-gray-500 font-semibold">or</div>
                         <div className="w-1/2 border-t-2 border-gray-300"></div>
@@ -121,7 +118,7 @@ const SignIn = () => {
 
                     <div className='flex justify-center gap-x-3 items-center mt-5'>
                         <SignInWithFacebookBtn />
-                    </div>
+                    </div> */}
 
                 </form>
             </div>

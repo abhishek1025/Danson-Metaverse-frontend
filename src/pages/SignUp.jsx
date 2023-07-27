@@ -127,19 +127,19 @@ const SignUp = () => {
                     </div>
 
 
-                    <div className="flex items-center justify-center mb-4">
+                    {/* <div className="flex items-center justify-center mb-4">
                         <div className="w-1/2 border-t-2 border-gray-300"></div>
                         <div className="mx-4 text-gray-500 font-semibold">or</div>
                         <div className="w-1/2 border-t-2 border-gray-300"></div>
-                    </div>
+                    </div> */}
 
-                    <div className='flex justify-center gap-x-3 items-center'>
+                    {/* <div className='flex justify-center gap-x-3 items-center'>
                         <SignInWithGoogleBtn CLIENT_ID={CLIENT_ID} />
                     </div>
 
                     <div className='flex justify-center gap-x-3 items-center mt-5'>
                         <SignInWithFacebookBtn />
-                    </div>
+                    </div> */}
 
                 </form>
             </div>
