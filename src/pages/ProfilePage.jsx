@@ -15,10 +15,14 @@ const ProfilePage = () => {
 
             // For email and password
             if (userIdentifier && serviceProvider === "email/password") {
+
+                const { username, email } = getCookies()
+
                 setUserInfo(JSON.stringify({
-                    "Error": "API N/A",
-                    "Message": "API under construction"
-                }));
+                    "username": username,
+                    "email": email
+                }, null, 2));
+
                 return;
             }
 
