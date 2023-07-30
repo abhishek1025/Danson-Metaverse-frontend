@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import SignInWithFacebookBtn from '../components/SignInWithFacebookBtn';
-import SignInWithGoogleBtn from '../components/SignInWithGoogleBtn';
+
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -39,7 +38,7 @@ const SignIn = () => {
 
         // Destroying cookie if log in exists
         destroyCookie();
-        createCookie(resMsg.token, "email/password")
+        createCookie(resMsg.token, "email/password", { email: resMsg.email, username: resMsg.username })
         setUserIdentifier(resMsg.token)
 
         // Clearing input fields
