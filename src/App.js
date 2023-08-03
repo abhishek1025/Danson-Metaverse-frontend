@@ -21,6 +21,7 @@ import SignUp from './pages/SignUp';
 import VerificationPage from './pages/VerificationPage';
 import ResetPassword from './pages/ResetPassword';
 import ForgetPassword from './pages/ForgetPassword';
+import UserVerificationPage from './pages/UserVerification';
 
 
 function App() {
@@ -41,9 +42,9 @@ function App() {
         <Route path='/profile' element={<ProfilePage />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/verifyAccount' element={<VerificationPage />} />
         <Route path='/forgot-password' element={<ForgetPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
+        <Route path='/user-verification' element={<UserVerificationPage />} />
       </Routes>
       <Footer />
     </div>
