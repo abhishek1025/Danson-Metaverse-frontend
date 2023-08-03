@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createCookie, destroyCookie } from '../utils/cookies.utils';
@@ -16,6 +16,8 @@ const SignIn = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -28,6 +30,12 @@ const SignIn = () => {
         })
 
         const resMsg = await res.json();
+
+        if (res.status === 554) {
+            toast(resMsg.message)
+            navigate("/user-verification")
+            return;
+        }
 
         if (!res.ok) {
             toast(resMsg.message)
@@ -100,9 +108,6 @@ const SignIn = () => {
                         Doesn't have an account? <Link to="/signup" className='text-blue-700 underline'> Sign Up </Link>
                     </div>
 
-                    <div className='text-center my-2'>
-                        Haven't verified the account yet? <Link to="/verifyAccount" className='text-blue-700 underline'> Click me </Link>
-                    </div>
 
                     {/* <div className="flex items-center justify-center mb-4 mt-3">
                         <div className="w-1/2 border-t-2 border-gray-300"></div>
